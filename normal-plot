@@ -28,8 +28,8 @@ plt.plot(data[:, 0], a * data[:, 0] + b, "--", color='blue', label = ("p ≈ " +
 plt.legend(bbox_to_anchor=(0.3, 0.95), loc='upper left', borderaxespad=0)
 
 #Set axis labels and plot title
-plt.xlabel("time(s)")
-plt.ylabel("pos(m)")
+plt.xlabel("time(t)")
+plt.ylabel("meters(p)")
 plt.title("Position Plot")
 
 #Export plot to file

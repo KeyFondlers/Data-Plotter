@@ -46,9 +46,9 @@ plt.scatter(data[:, 0], data[:, 1], c='r')
 plt.legend(bbox_to_anchor=(0.025, 0.95), loc='upper left', borderaxespad=0)
 
 #Set axis labels and plot title
-plt.xlabel("time(s)")
-plt.ylabel("pos(m)")
-plt.title("Position Plot Squared")
+plt.xlabel("time(t)")
+plt.ylabel("meters(p)")
+plt.title("Position Squared Plot")
 
 #Export plot to file
 plt.savefig("images/Squared Plot.png")
