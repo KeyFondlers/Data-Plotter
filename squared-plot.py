@@ -17,7 +17,7 @@ with open("data.txt") as file:
         #Converts the data point to floats
         dataPoint = [float(i) for i in dataPoint]
         #Square the y value of the data point
-        dataPoint[1] = np.power(dataPoint[1], 2)
+
         #Add data point to the greater list
         data.append(dataPoint)    
 
