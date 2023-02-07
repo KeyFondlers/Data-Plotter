@@ -44,6 +44,8 @@ trend_lines = [
 
 trend_line = np.mean(trend_lines, axis=0)
 
+print(np.mean(trend_line))
+
 plt.plot(trial1[:,0][2:], trial1Acceleration, 'ro', label='Trial 1')
 plt.plot(trial2[:,0][2:], trial2Acceleration, 'bo', label='Trial 2')
 plt.plot(trial3[:,0][2:], trial3Acceleration, 'go', label='Trial 3')
@@ -52,6 +54,7 @@ plt.plot(trial5[:,0][2:], trial5Acceleration, 'co', label='Trial 5')
 plt.plot(trial6[:,0][2:], trial6Acceleration, 'mo', label='Trial 6')
 
 plt.plot(trial1[:,0][2:], trend_line, 'k-', label = "Trend Line")
+plt.plot(trial1[:,0][2:], np.full(16, np.mean(trend_line)), 'k--', label='Trend Line Mean')
 
 
 plt.xlabel('Time (s)')

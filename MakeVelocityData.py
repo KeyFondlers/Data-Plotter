@@ -36,6 +36,10 @@ trend_lines = [
 
 trend_line = np.mean(trend_lines, axis=0)
 
+m, b = np.polyfit(trial1[:,0][1:], trend_line, 1)
+
+print("y = " + str(m) + "x + " + str(b))
+
 plt.plot(trial1[:,0][1:], trial1Velocity, 'ro', label='Trial 1')
 plt.plot(trial2[:,0][1:], trial2Velocity, 'bo', label='Trial 2')
 plt.plot(trial3[:,0][1:], trial3Velocity, 'go', label='Trial 3')
