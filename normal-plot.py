@@ -28,9 +28,9 @@ plt.plot(data[:, 0], a * data[:, 0] + b, "--", color='blue', label = ("p ≈ " +
 plt.legend(bbox_to_anchor=(0.3, 0.95), loc='upper left', borderaxespad=0)
 
 #Set axis labels and plot title
-plt.xlabel("time(t)")
-plt.ylabel("meters(p)")
-plt.title("Position Plot")
+plt.xlabel("Block Weight (g)")
+plt.ylabel("Pulley Mass (g)")
+plt.title("Block vs. Pulley Masses")
 
 #Export plot to file
 plt.savefig("images/Normal Plot.png")
