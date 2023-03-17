@@ -19,18 +19,20 @@ data = np.array(data);
 a, b = np.polyfit(data[:, 0], data[:, 1], 1)
 
 #Generate red scatterplot from data
-plt.scatter(data[:, 0], data[:, 1], c='r')
+plt.plot(data[:, 0], data[:, 1], 'o--')
 
 #Plot a blue dotted trend line from polyfit parameters
-plt.plot(data[:, 0], a * data[:, 0] + b, "--", color='blue', label = ("p ≈ " + str(round(a,4)) + "t + " + str(round(b,4))))
+#plt.plot(data[:, 0], a * data[:, 0] + b, "--", color='blue', label = ("p ≈ " + str(round(a,4)) + "t + " + str(round(b,4))))
 
 #Move the trend line legend
 plt.legend(bbox_to_anchor=(0.3, 0.95), loc='upper left', borderaxespad=0)
 
 #Set axis labels and plot title
-plt.xlabel("Block Weight (g)")
-plt.ylabel("Pulley Mass (g)")
-plt.title("Block vs. Pulley Masses")
+plt.xlabel("Seconds(s)")
+plt.ylabel("Scale Mass(g)")
+plt.title("Elevator Experiment")
+
+plt.show()
 
 #Export plot to file
 plt.savefig("images/Normal Plot.png")
